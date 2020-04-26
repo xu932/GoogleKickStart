@@ -15,31 +15,23 @@ public:
             if (p != nullptr)   delete p;
         }
     }
-
-    void insert(string s, int idx) {
-        children++;
-        if (idx == s.length()) {
-            return;
-        } else {
-            if (child[s[idx] - 'A'] == nullptr) {
-                child[s[idx] - 'A'] = new Trie();
-            }
-            child[s[idx] - 'A']->insert(s, idx + 1);
-        }
-    }
 };
 
-int bundling_getScore(Trie* t, int K, int level) {
-    int ret = 0, remain = t->children;
-    for (auto p : t->child) {
-        if (p == nullptr)   continue;
-        remain -= p->children;
-        if (p->children >= K) {
-            ret += bundling_getScore(p, K, level + 1);
-        }
-        remain += p->children % K;
+void insert(Trie* cur, string s) {
+    for (auto ch : s) {
+        if (cur->child[ch - 'A'] == nullptr)    cur->child[ch - 'A'] = new Trie();
+        cur = cur->child[ch - 'A'];
+        cur->children++;
     }
-    ret += remain / K * level;
+}
+
+int bundling_getScore(Trie* t, int K) {
+    int ret = 0;
+    for (auto p : t->child) {
+        if (p == nullptr || p->children < K)    continue;
+        ret += bundling_getScore(p, K);
+    }
+    ret += t->children / K;
     return ret;
 }
 
@@ -58,9 +50,10 @@ int Bundling() {
     string s;
     for (int i = 0; i < N; i++) {
         cin >> s;
-        t->insert(s, 0);
+        insert(t, s);
     }
-    int score = bundling_getScore(t, K, 0);
+    int score = bundling_getScore(t, K);
+    
     delete t;
     return score;
 }
