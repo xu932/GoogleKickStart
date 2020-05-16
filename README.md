@@ -40,5 +40,5 @@ If any of the options are missing, then default will run ''everything'' for that
 - [ ] [2019](https://github.com/xu932/GoogleKickStart/tree/master/src/2019)
   - [x] [Round A](https://github.com/xu932/GoogleKickStart/tree/master/src/2019/RoundA)
     - [x] [Training](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundA/Q1_Allocation.cpp)
-    - [ ] Parcels
+    - [x] [Parcels](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundA/Q2_Parcels.cpp)
     - [ ] Contention
