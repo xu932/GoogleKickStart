@@ -26,7 +26,7 @@ class Solution(object):
         if f'Round{rnd}' not in os.listdir(path):
             return ''
         path = os.path.join(path, f'Round{rnd}')
-        
+
         files = os.listdir(path)
         for f in files:
             if f.startswith(f'Q{question}'):
@@ -69,9 +69,9 @@ class Solution(object):
             expect = f.read()
         if expect[-1] == '\n':
             expect = expect[:-1]
-        
+
         assert output == expect, 'The output does not match expected output'
-    
+
     def check_memory(self):
         with open(self.in_file, 'r') as f:
             stdin = f.read()

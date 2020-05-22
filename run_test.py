@@ -1,7 +1,6 @@
 import sys
 
-def test_my_first(solutions):
-
+def test_solutions(solutions):
     correct = len(solutions)
     for s in solutions:
         sys.stderr.write(f'running {str(s)}... ')
@@ -11,7 +10,7 @@ def test_my_first(solutions):
             s.check_memory()
         except AssertionError as e:
             sys.stderr.write(f'Solution {str(s)} failed\n')
-            sys.stderr.write(e)
+            sys.stderr.write(str(e))
             correct -= 1
             result = 'Failed'
         sys.stderr.write(f'{result}\n')
