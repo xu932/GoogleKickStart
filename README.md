@@ -39,7 +39,7 @@ If any of the options are missing, then default will run ''everything'' for that
     - [ ] Bundling
   - [ ] [Round C](https://github.com/xu932/GoogleKickStart/tree/master/src/2020/RoundC)
     - [x] [Countdown](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundC/Q1_Countdown.cpp)
-    - [ ] Stable Wall
+    - [x] [Stable Wall](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundC/Q2_StableWall.cpp)
     - [ ] Perfect Subarray
     - [ ] Candies
 - [ ] [2019](https://github.com/xu932/GoogleKickStart/tree/master/src/2019)
