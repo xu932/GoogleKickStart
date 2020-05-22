@@ -37,6 +37,11 @@ If any of the options are missing, then default will run ''everything'' for that
     - [x] [Bus Routes](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundB/Q2_BusRoutes.cpp)
     - [x] [Robot Path Decoding](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundB/Q3_RobotPathDecoding.cpp)
     - [ ] Bundling
+  - [ ] [Round C](https://github.com/xu932/GoogleKickStart/tree/master/src/2020/RoundC)
+    - [x] [Countdown](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundC/Q1_Countdown.cpp)
+    - [ ] Stable Wall
+    - [ ] Perfect Subarray
+    - [ ] Candies
 - [ ] [2019](https://github.com/xu932/GoogleKickStart/tree/master/src/2019)
   - [x] [Round A](https://github.com/xu932/GoogleKickStart/tree/master/src/2019/RoundA)
     - [x] [Training](https://github.com/xu932/GoogleKickStart/blob/master/src/2020/RoundA/Q1_Allocation.cpp)
